@@ -1,0 +1,1 @@
+web gunicorn myimage.wsgi --log-file -

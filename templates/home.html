@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container">
+<img src= "{% static 'image1.jpg' %}"  /> <br><br><br>
+</div>
+
+<section>
+	
+
+        
+            <h2 class="h3" style="text-align:center; ">Our Motivation</cite></h2>
+            
+ 
+            <p class="container" style=" text-align: center;"><i>           	The use of cosmetics to enhance complexion and beauty has been known since antiquity. The popularity of using make up, particularly foundation is widely increasing nowadays among not only females butmales as well. Right foundation selection is essential to achieve perfect make-up look.
+
+
+Foundation selection is the first step in achieving successful make-up. To pick out a foundation, you must find one that perfectly matches the colour of your skin, or comes as close as possible.  Colour may be identified by a name, number, letter or any combination of the three. A colour can vary drastically from brand to brand, and sometimes, within one brand across different formulas. Sometimes intentionally using a mismatch can help in achieving more accurate result. A foundation that apparently seems yellow in the bottle may appear much less yellow, or not appear yellow at all.
+
+ The most common mistake, while buying a foundation, which women usually make, is selection of foundation colour. Study suggests that applying a wrong foundation colour makes u look weird and rather unattractive.  There are only manual solutions to overcome this problem. For example, a company will provide its user with a shade chart, or will provide online questionnaires on their website or sometimes there are experts at drug store that help you find right colour. All these procedures are time consuming and may provide more or less inefficient results. 
+
+In an article written in wall street journal, women may agree on spending a lot of money on make-up, but they will not be willing to spend greater amount of time. CoverGirl, from Procter & Gamble Co., PG -0.17% says women believe they spend 7.62 minutes on average applying makeup. Superdrug, conducted a survey on 3,000 females, found that ladies start buying cosmetic at the early age of 16. On average, women shop for makeup five times a year, spending around $39.45 on each trip. When multiplied by 65 years, which is the average female adult life spa, the total amount adds upto $13,000. According to a bolg posted on everythinggirlslove.com, Women spend about $7 billion a year on makeup, around $100 each. Vanity Fare says in the U.S. alone, 68% of the 70 million women in the country (48 million) work and spend money on beauty products. A woman on average buys 2-3 times more make-up products than are needed. 
+</q></i>
+</p>
+          </div>
+        </div>
+      </div>
+  </div>
+    </section>
+</section>
+<br><br><br>
+<div class="container">
+
+<img src= "{% static 'image2.jpg' %}"  /> <br><br><br>
+</div>
+
+<h6 class="h3" style="text-align: center;">Find your true match</cite></h2>
+<div  id="alert-box" ></div>
+<div  id="image-box" class="mb-3" style="  height: 400px;width: 45%; float: right"></div>
+
+<section style="text-align:center;align-items: justify;">
+	
+<form method="POST" enctype="multipart/form-data" action=""  id="image-form"> 
+    {% csrf_token %} 
+    {{ form.as_p }} 
+    <input id="upload" type="submit" value="Submit"> 
+</form> <br><br>
+
+<a id="res" href="{% url 'core:match'  %}" class="btn btn-primary btn-md my-0 p">Get Result
+                <i class="fas fa-shopping-cart ml-1"></i>
+              </a>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+ {% endblock content %}
